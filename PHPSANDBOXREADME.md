@@ -1,10 +1,10 @@
-##version info
+## version info
 
 laravel v8.83.27
 
 php v8.2
 
-##Set Environment Variable:
+## Set Environment Variable:
 
 APP_ENV=local
 
@@ -17,6 +17,8 @@ APP_NAME=Laravel
 APP_DEBUG=true
 
 LOG_LEVEL=debug
+
+DB_DATABASE=/var/www/database.sqlite
 
 LOG_CHANNEL=stack
 
@@ -34,9 +36,11 @@ SESSION_LIFETIME=120
 
 FILESYSTEM_DRIVER=local
 
-##Terminal commands:
+## Terminal commands:
 
-touch database.sqlite (at /var/www)
+touch /var/www/database.sqlite
+
+php artisan migrate
 
 composer require laravel/breeze:1.9.4
 
